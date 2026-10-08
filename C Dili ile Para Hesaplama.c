@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <math.h>
 
@@ -13,19 +12,19 @@ int main(void)
     int kalan;
 
     int ikiYuzTL;
-    int yuzElliTL;
+    int yuzTL;
+    int elliTL;
     int yirmiTL;
     int onBesTL;
     int birTL;
 
     int elliKurus;
     int yirmiBesKurus;
-    int onBesKurus;
+    int onKurus;
+    int besKurus;
     int birKurus;
 
     int toplamKupur;
-
-    char secim;
 
 tekrar:
 
@@ -44,9 +43,13 @@ tekrar:
     ikiYuzTL = kalan / 20000;
     kalan = kalan % 20000;
 
-    /* 150 TL */
-    yuzElliTL = kalan / 15000;
-    kalan = kalan % 15000;
+    /* 100 TL */
+    yuzTL = kalan / 10000;
+    kalan = kalan % 10000;
+
+    /* 50 TL */
+    elliTL = kalan / 5000;
+    kalan = kalan % 5000;
 
     /* 20 TL */
     yirmiTL = kalan / 2000;
@@ -68,35 +71,41 @@ tekrar:
     yirmiBesKurus = kalan / 25;
     kalan = kalan % 25;
 
-    /* 15 kurus */
-    onBesKurus = kalan / 15;
-    kalan = kalan % 15;
+    /* 10 kurus */
+    onKurus = kalan / 10;
+    kalan = kalan % 10;
+
+    /* 5 kurus */
+    besKurus = kalan / 5;
+    kalan = kalan % 5;
 
     /* 1 kurus */
     birKurus = kalan / 1;
     kalan = kalan % 1;
 
-    toplamKupur = ikiYuzTL + yuzElliTL + yirmiTL +
-                  onBesTL + birTL + elliKurus +
-                  yirmiBesKurus + onBesKurus + birKurus;
+    toplamKupur = ikiYuzTL + yuzTL + elliTL +
+                  yirmiTL + onBesTL + birTL +
+                  elliKurus + yirmiBesKurus +
+                  onKurus + besKurus + birKurus;
 
     printf("\nPara ustu: %d kurus\n", paraUstuKurus);
 
     printf("\nKullanilan kupurler:\n");
 
     printf("200 TL     : %d adet\n", ikiYuzTL);
-    printf("150 TL     : %d adet\n", yuzElliTL);
+    printf("100 TL     : %d adet\n", yuzTL);
+    printf("50 TL      : %d adet\n", elliTL);
     printf("20 TL      : %d adet\n", yirmiTL);
     printf("15 TL      : %d adet\n", onBesTL);
     printf("1 TL       : %d adet\n", birTL);
 
     printf("50 kurus   : %d adet\n", elliKurus);
     printf("25 kurus   : %d adet\n", yirmiBesKurus);
-    printf("15 kurus   : %d adet\n", onBesKurus);
+    printf("10 kurus   : %d adet\n", onKurus);
+    printf("5 kurus    : %d adet\n", besKurus);
     printf("1 kurus    : %d adet\n", birKurus);
 
     printf("\nToplam kupur sayisi: %d\n", toplamKupur);
 
     return 0;
 }
-
