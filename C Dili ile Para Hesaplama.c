@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <math.h>
 
@@ -15,7 +16,8 @@ int main(void)
     int yuzTL;
     int elliTL;
     int yirmiTL;
-    int onBesTL;
+    int onTL;
+    int besTL;
     int birTL;
 
     int elliKurus;
@@ -55,9 +57,13 @@ tekrar:
     yirmiTL = kalan / 2000;
     kalan = kalan % 2000;
 
-    /* 15 TL */
-    onBesTL = kalan / 1500;
-    kalan = kalan % 1500;
+    /* 10 TL */
+    onTL = kalan / 1000;
+    kalan = kalan % 1000;
+
+    /* 5 TL */
+    besTL = kalan / 500;
+    kalan = kalan % 500;
 
     /* 1 TL */
     birTL = kalan / 100;
@@ -84,7 +90,7 @@ tekrar:
     kalan = kalan % 1;
 
     toplamKupur = ikiYuzTL + yuzTL + elliTL +
-                  yirmiTL + onBesTL + birTL +
+                  yirmiTL + onTL + besTL + birTL +
                   elliKurus + yirmiBesKurus +
                   onKurus + besKurus + birKurus;
 
@@ -96,7 +102,8 @@ tekrar:
     printf("100 TL     : %d adet\n", yuzTL);
     printf("50 TL      : %d adet\n", elliTL);
     printf("20 TL      : %d adet\n", yirmiTL);
-    printf("15 TL      : %d adet\n", onBesTL);
+    printf("10 TL      : %d adet\n", onTL);
+    printf("5 TL       : %d adet\n", besTL);
     printf("1 TL       : %d adet\n", birTL);
 
     printf("50 kurus   : %d adet\n", elliKurus);
@@ -109,3 +116,5 @@ tekrar:
 
     return 0;
 }
+
+
