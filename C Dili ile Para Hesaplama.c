@@ -1,7 +1,6 @@
+
 #include <stdio.h>
 #include <math.h>
-
-/* Ben Abdullah Arslan Kırklareli Üniversitesi Yazılım Mühendisliği 1. Sınıf Öğrencisiyim. Bu kodları Algoritma ve Programlama Dersim İçin Xcode Üzerinden C Diliyle Yazdım.*/
 
 int main(void)
 {
@@ -95,16 +94,6 @@ tekrar:
     printf("1 kurus    : %d adet\n", birKurus);
 
     printf("\nToplam kupur sayisi: %d\n", toplamKupur);
-
-    printf("\nTekrar calistirmak ister misiniz? (E/H): ");
-    scanf(" %c", &secim);
-
-    if (secim == 'E' || secim == 'e')
-    {
-        goto tekrar;
-    }
-
-    printf("\nProgram kapatiliyor...\n");
 
     return 0;
 }
