@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <math.h>
 
+/* Abdullah Arslan Kırklareli Yazılım Mühendisliği 1. Sınıf Öğrencisiyim Bu Projeyi Xcode Üzerinden c Dili ile Yazdım */
+
 int main(void)
 {
     float urunTutari;
