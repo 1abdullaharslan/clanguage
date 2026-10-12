@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <math.h>
 
@@ -37,7 +36,7 @@ tekrar:
     scanf("%f", &odenenPara);
 
     /* Para ustunu kurus cinsine ceviriyoruz */
-    paraUstuKurus = (int)roundf((odenenPara - urunTutari) * 100);
+    paraUstuKurus = (int)((odenenPara - urunTutari) * 100 + 0.5);
 
     kalan = paraUstuKurus;
 
@@ -116,5 +115,3 @@ tekrar:
 
     return 0;
 }
-
-
